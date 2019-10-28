@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание на дом - отгадайте загадку и воссоздайте структуру html странички</title>
+</head>
+<body>
+    <h1>Загадка!</h1>
+    <mark>Я зашифровал слово попробуй его расшифровать!А также попробуй создать точно такую же страничку=) </mark>
+<h2>жявягйябдйя</h2>
+<form id="quizForm" action="">
+    <input type="text" />
+    <input id="secret" type="submit" value="Ответ"
+</form>
+<p id="answer"></p>
+<strong>Подсказка!</strong>
+<small>Этот шифр был придуман древнерусским <i>Диктатором</i></small>
+<script>
+        document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        var x = document.getElementById("quizForm");
+        const answ = x.elements[0].value;
+        if (answ === 'загадкавека') {
+        const text = 'Поздравляю это верный ответ! Настоящий шифр = 999 &#9989; Но это не точно... попробуй F12'
+        document.getElementById("answer").innerHTML = text;
+         } else {
+        const text = 'Неа, попробуй еще разок &#9940;'
+        document.getElementById("answer").innerHTML = text;        
+    }
+});
+    </script>
+</body>
+</html>
